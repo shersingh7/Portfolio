@@ -447,6 +447,10 @@ footer a{
     margin: 0 .5em;
 }
 
+.social-list__link {
+    padding: .5em;
+}
+
 
 /* Individual portfolio items */
 
