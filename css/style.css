@@ -1,0 +1,213 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: #0d0d0d;
+  color: #f2f2f2;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+}
+
+/* Navigation menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00ccff;
+}
+
+/* Intro section */
+.intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #000, #001a33);
+}
+
+.neon-text {
+  color: #00ccff;
+  text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+  font-size: 4rem;
+}
+
+.tagline {
+  color: #f2f2f2;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Services Section */
+.services {
+  padding: 5rem 0;
+  background: #111;
+  text-align: center;
+}
+
+.section-title {
+  color: #00ccff;
+  text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.service-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.service-card {
+  background: #1a1a1a;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+/* About Section */
+.about {
+  background: #0d0d0d;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.about img {
+  margin-top: 2rem;
+  width: 300px;
+  border-radius: 50%;
+}
+
+/* Portfolio section */
+.portfolio {
+  background: #0d0d0d;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+  flex-wrap: wrap;
+}
+
+.portfolio-item img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Footer section */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: #111;
+  color: #f2f2f2;
+  font-size: 1.2rem;
+}
+
+/* Footer links with icons */
+footer a {
+  color: #00ccff;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Social icons */
+footer i {
+  margin-right: 0.2rem; /* Space between icon and text */
+}
+
+/* Ensure space between links */
+footer ul li {
+  margin-right: 1.5rem;
+}
+  
+/* Ensure the "Contact me at" text and links are properly spaced */
+footer p {
+  margin-bottom: 1rem; /* Space between text and social links */
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #111;
+}
+
+footer .social-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+footer .social-list__item {
+  margin-right: 1rem;
+}
+
+footer .social-list__item:last-child {
+  margin-right: 0;
+}
+
+footer .social-list__item a {
+  color: #00ccff;
+  font-size: 1rem;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
