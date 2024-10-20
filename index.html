@@ -135,11 +135,12 @@
       }
 
       .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        padding: 2rem;
-      }
+        display: flex;
+        justify-content: center; /* Center items horizontally */
+        gap: 1.5rem; /* Space between items */
+        padding: 0 1.5rem;
+        flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+        }
 
       .portfolio-item img {
         width: 100%;
