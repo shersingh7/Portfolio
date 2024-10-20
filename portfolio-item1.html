@@ -4,162 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Android Chat App</title>
-    <link rel="stylesheet" href="stytle.css" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <style>
-      /* Full-width and full-height layout fix */
-      body, html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%; /* Ensure the body takes the full viewport height */
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: column; /* To allow footer to stay at bottom */
-        background-color: #0d0d0d; /* Ensuring no default background shows */
-      }
-
-      /* Main content should flex to fill the available space */
-      .main-content {
-        flex: 1; /* Ensure the main content takes up the remaining space */
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Center the content vertically */
-      }
-
-      /* Adjusted intro section */
-      .intro {
-        height: 20vh; /* Further reduced height */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(135deg, #000, #001a33);
-        color: #f2f2f2;
-        margin-top: 3.5rem;
-        border: none; /* Remove any borders causing the white space */
-      }
-
-      .intro__content {
-        text-align: center;
-      }
-
-      .section__title--intro {
-        font-size: 2.5rem;
-        color: #00ccff;
-        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
-        margin-bottom: 0; /* Removed unnecessary bottom margin */
-      }
-
-      .section__subtitle--intro {
-        font-size: 1.1rem;
-        margin-top: 0.5rem;
-        color: #f2f2f2;
-      }
-
-      /* Portfolio section styling */
-      .portfolio-item-individual {
-        background: #0d0d0d;
-        padding: 0.5rem 0;
-        text-align: center;
-        color: #f2f2f2;
-        margin-bottom: 0; /* Ensuring no white space before footer */
-        border: none; /* Remove any unwanted borders */
-      }
-
-      .portfolio-item-individual p {
-        font-size: 1.3rem; /* Increased font size */
-        line-height: 1.6;
-        max-width: 80%; /* Limit the width to avoid excessive stretching */
-        margin: 0 auto 1rem; /* Center and add space at the bottom */
-        word-wrap: break-word; /* Ensure text wraps properly */
-      }
-
       .portfolio-item-individual img {
-        width: 60%; /* Increased image size */
-        max-width: 320px;
+        width: 80%; /* Increased image size */
+        max-width: 415px;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
         margin-top: 0.5rem;
       }
-
-      /* Header styling */
-      header {
-        display: flex;
-        justify-content: space-between;
-        padding: 1rem;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-        top: 0;
-      }
-
-      /* Updated nav-links font size to match index.html */
-      .nav-links {
-        list-style: none;
-        display: flex;
-      }
-
-      .nav-links li {
-        margin-right: 2rem; /* Match spacing with index.html */
-      }
-
-      .nav-links li a {
-        text-decoration: none;
-        color: #f2f2f2;
-        font-size: 1.3rem; /* Match index.html font size */
-        transition: color 0.3s ease;
-      }
-
-      .nav-links li a:hover {
-        color: #00ccff;
-      }
-
-      /* Footer styling (matching index.html) */
-      footer {
-        text-align: center;
-        padding: 1rem 0; /* Increased padding for consistency */
-        background: #111;
-        color: #f2f2f2;
-        font-size: 1.2rem; /* Increased footer font size to match index */
-        margin-bottom: 0; /* Ensure no extra space at bottom */
-        border: none; /* Remove borders */
-        width: 100%; /* Ensure it covers full width */
-      }
-
-      footer a {
-        color: #00ccff;
-        text-decoration: none;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
-      }
-
-      footer .social-list {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
-      }
-
-      footer .social-list__item {
-        margin-right: 1rem;
-      }
-
-      footer .social-list__item:last-child {
-        margin-right: 0;
-      }
-
-      footer .social-list__item a {
-        color: #00ccff;
-        font-size: 1.2rem; /* Increased font size for footer links */
-      }
-
-      /* Add smooth scroll for a polished effect */
-      html {
-        scroll-behavior: smooth;
-      }
-
     </style>
   </head>
   <body>
@@ -198,11 +53,23 @@
     <footer>
       <p>Contact me at: <a href="mailto:davinderverma@yahoo.com">davinderverma@yahoo.com</a></p>
       <ul class="social-list">
-        <li class="social-list__item"><a href="https://twitter.com/davinder0110v" target="_blank"><i class="fab fa-twitter"></i> X</a></li>
-        <li class="social-list__item"><a href="https://www.linkedin.com/in/davinder-verma" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        <li class="social-list__item"><a href="https://github.com/shersingh7" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+      <li>
+          <a href="https://twitter.com/davinder0110v">
+          <i class="fab fa-twitter"></i> X
+          </a>
+      </li>
+      <li>
+          <a href="https://www.linkedin.com/in/davinder-verma">
+          <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+      </li>
+      <li>
+          <a href="https://github.com/shersingh7">
+          <i class="fab fa-github"></i> GitHub
+          </a>
+      </li>
       </ul>
-    </footer>
+  </footer>
 
     <script src="script.js"></script>
   </body>

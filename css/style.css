@@ -211,3 +211,66 @@ footer .social-list__item a {
 html {
   scroll-behavior: smooth;
 }
+
+/* Main content should flex to fill the available space */
+.main-content {
+  flex: 1; /* Ensure the main content takes up the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+}
+
+/* Adjusted intro section */
+.intro {
+  height: 20vh; /* Further reduced height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #000, #001a33);
+  color: #f2f2f2;
+  margin-top: 3.5rem;
+  border: none; /* Remove any borders causing the white space */
+}
+
+.intro__content {
+  text-align: center;
+}
+
+.section__title--intro {
+  font-size: 2.5rem;
+  color: #00ccff;
+  text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+  margin-bottom: 0; /* Removed unnecessary bottom margin */
+}
+
+.section__subtitle--intro {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: #f2f2f2;
+}
+
+/* Portfolio section styling */
+.portfolio-item-individual {
+  background: #0d0d0d;
+  padding: 0.5rem 0;
+  text-align: center;
+  color: #f2f2f2;
+  margin-bottom: 0; /* Ensuring no white space before footer */
+  border: none; /* Remove any unwanted borders */
+}
+
+.portfolio-item-individual p {
+  font-size: 1.3rem; /* Increased font size */
+  line-height: 1.6;
+  max-width: 80%; /* Limit the width to avoid excessive stretching */
+  margin: 0 auto 1rem; /* Center and add space at the bottom */
+  word-wrap: break-word; /* Ensure text wraps properly */
+}
+
+.portfolio-item-individual img {
+  width: 60%; /* Increased image size */
+  max-width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
+  margin-top: 0.5rem;
+}

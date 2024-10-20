@@ -8,165 +8,15 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" href="stytle.css" /> 
-    
-    <!-- Inline CSS -->
+    <!-- Link to external CSS in the css folder -->
+    <link rel="stylesheet" href="css/style.css" /> 
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: 'Orbitron', sans-serif;
-        background: #0d0d0d;
-        color: #f2f2f2;
-      }
-
-      header {
-        display: flex;
-        justify-content: space-between;
-        padding: 1rem;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-      }
-
-      .nav-links {
-        list-style: none;
-        display: flex;
-      }
-
-      .nav-links li {
-        margin-right: 2rem;
-      }
-
-      .nav-links li a {
-        text-decoration: none;
-        color: #f2f2f2;
-        font-size: 1.2rem;
-        transition: color 0.3s ease;
-      }
-
-      .nav-links li a:hover {
-        color: #00ccff;
-      }
-
-      .intro {
+       .intro {
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         background: linear-gradient(135deg, #000, #001a33);
-      }
-
-      .neon-text {
-        color: #00ccff;
-        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
-        font-size: 4rem;
-      }
-
-      .tagline {
-        color: #f2f2f2;
-        font-size: 1.5rem;
-        margin-top: 1rem;
-      }
-
-      /* Services Section */
-      .services {
-        padding: 5rem 0;
-        background: #111;
-        text-align: center;
-      }
-
-      .section-title {
-        color: #00ccff;
-        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
-        font-size: 3rem;
-        margin-bottom: 3rem;
-      }
-
-      .service-list {
-        display: flex;
-        justify-content: space-around;
-      }
-
-      .service-card {
-        background: #1a1a1a;
-        padding: 2rem;
-        text-align: center;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
-        transition: transform 0.3s ease;
-      }
-
-      .service-card:hover {
-        transform: translateY(-10px);
-      }
-
-      /* About Section */
-      .about {
-        background: #0d0d0d;
-        padding: 4rem 2rem;
-        text-align: center;
-      }
-
-      .about p {
-        max-width: 900px;
-        margin: 0 auto;
-        font-size: 1.2rem;
-        line-height: 1.8;
-      }
-
-      .about img {
-        margin-top: 2rem;
-        width: 300px;
-        border-radius: 50%;
-      }
-
-      /* Portfolio Section */
-      .portfolio {
-        background: #0d0d0d;
-        padding: 4rem 0;
-        text-align: center;
-      }
-
-      .portfolio-grid {
-        display: flex;
-        justify-content: center; /* Center items horizontally */
-        gap: 1.5rem; /* Space between items */
-        padding: 0 1.5rem;
-        flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-        }
-
-      .portfolio-item img {
-        width: 100%;
-        max-width: 250px;
-        height: auto;
-        border-radius: 10px;
-        transition: transform 0.3s ease;
-      }
-
-      .portfolio-item:hover img {
-        transform: scale(1.05);
-      }
-
-      footer {
-        text-align: center;
-        padding: 2rem;
-        background: #111;
-      }
-
-      footer a {
-        color: #00ccff;
-        text-decoration: none;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
       }
     </style>
   </head>
@@ -253,21 +103,19 @@
     <!-- Footer -->
     <footer>
         <p>Contact me at: <a href="mailto:davinderverma@yahoo.com">davinderverma@yahoo.com</a></p>
-        <ul class="social-list" style="list-style-type: none; padding: 0;">
-        <li style="display: inline-block; margin-right: 1.5rem;">
-            <a href="https://twitter.com/davinder0110v" style="text-decoration: none; color: #00ccff;">
+        <ul class="social-list">
+        <li>
+            <a href="https://twitter.com/davinder0110v">
             <i class="fab fa-twitter"></i> X
             </a>
         </li>
-        <li style="display: inline-block; margin-right: 1.5rem;">
-            <a href="https://www.linkedin.com/in/davinder-verma" style="text-decoration: none; color: #00ccff;">
+        <li>
+            <a href="https://www.linkedin.com/in/davinder-verma">
             <i class="fab fa-linkedin"></i> LinkedIn
             </a>
         </li>
-        <li style="
-
-display: inline-block;">
-            <a href="https://github.com/shersingh7" style="text-decoration: none; color: #00ccff;">
+        <li>
+            <a href="https://github.com/shersingh7">
             <i class="fab fa-github"></i> GitHub
             </a>
         </li>
@@ -275,6 +123,6 @@ display: inline-block;">
     </footer>
 
     <!-- JavaScript for Smooth Scrolling -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
