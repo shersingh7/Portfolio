@@ -1,110 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Davinder Portfolio Website</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desi Khanna - Food Ordering</title>
+    <link rel="stylesheet" href="stytle.css" />
+    <style>
+      /* Full-width and full-height layout fix */
+      body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: #0d0d0d;
+      }
 
+      /* Main content should flex to fill the available space */
+      .main-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+      /* Adjusted intro section */
+      .intro {
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #000, #001a33);
+        color: #f2f2f2;
+        margin: 0; /* Removed margin below the nav */
+        border: none;
+      }
 
-        <link rel="stylesheet" href="css/stytle.css">
+      .intro__content {
+        text-align: center;
+      }
 
+      .section__title--intro {
+        font-size: 2.8rem;
+        color: #00ccff;
+        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+        margin-bottom: 0;
+      }
 
+      .section__subtitle--intro {
+        font-size: 1.2rem;
+        margin-top: 0.2rem; /* Reduced space between title and subtitle */
+        color: #f2f2f2;
+      }
 
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.jpg" alt="My logo">
-                </a>     
-            </div>
+      /* Portfolio section styling */
+      .portfolio-item-individual {
+        background: #0d0d0d;
+        padding: 0.5rem 0;
+        text-align: center;
+        color: #f2f2f2;
+        margin-bottom: 0;
+        border: none;
+      }
 
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
+      .portfolio-item-individual p {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        max-width: 80%;
+        margin: 0 auto 1rem;
+        word-wrap: break-word;
+      }
 
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a></li>
-                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
-                </ul>
-            </nav>
+      .portfolio-item-individual img {
+        width: 90%; /* Increased image size */
+        max-width: 900px; /* Larger max width */
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
+        margin-top: 0.5rem;
+      }
 
-        </header>
+      /* Header styling */
+      header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        top: 0;
+      }
 
-        <!-- Introduction -->
-        <section class="intro" id="home" style="padding: 2em 2em">
-            <h1 class="section__title section__title--intro">
-                <strong>Desi Khanna</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">(Food Ordering Site)</p>
-            <img src="img/portfolio-details.jpg" alt="" class="intro__img">
-        </section>
+      /* Navigation styling */
+      .nav-links {
+        list-style: none;
+        display: flex;
+        margin: 0; /* Removed extra margin */
+      }
 
-        <div class="portfolio-item-individual">
-            <p>
-                Food ordering site with muti-user authentication. The site also has cart functionality for ordering food.
-            </p>
-            <p>
-                • All back-end functionality done using Node.js and Express.<br>
-                • Used body-parser module to handle form submissions. <br>
-                • Views were created with Express-Handlebars. <br>
-                • MongoDB for database. <br>
-                • Used bcrypt.js to encrypt user password <br>
-            </p>            
-            
-            <img src="img/desiKhanna.jpg" alt="">
+      .nav-links li {
+        margin-right: 2rem;
+      }
 
+      .nav-links li a {
+        text-decoration: none;
+        color: #f2f2f2;
+        font-size: 1.3rem;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links li a:hover {
+        color: #00ccff;
+      }
+
+      /* Footer styling */
+      footer {
+        text-align: center;
+        padding: 1rem 0;
+        background: #111;
+        color: #f2f2f2;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        border: none;
+        width: 100%;
+      }
+
+      footer a {
+        color: #00ccff;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      footer .social-list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+      }
+
+      footer .social-list__item {
+        margin-right: 1rem;
+      }
+
+      footer .social-list__item:last-child {
+        margin-right: 0;
+      }
+
+      footer .social-list__item a {
+        color: #00ccff;
+        font-size: 1.2rem;
+      }
+
+      /* Add smooth scroll for a polished effect */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#about">About Me</a></li>
+          <li><a href="index.html#work">Portfolio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content">
+      <!-- Intro Section -->
+      <section class="intro">
+        <div class="intro__content">
+          <h1 class="section__title section__title--intro">Desi Khanna</h1>
+          <p class="section__subtitle section__subtitle--intro">(Food Ordering Website)</p>
         </div>
+      </section>
 
-        <!-- Footer -->
+      <!-- Portfolio Item Content -->
+      <div class="portfolio-item-individual">
+        <p>
+          A full-featured food ordering website with multi-user authentication, cart functionality, and more, using Node.js and Express.
+        </p>
+        <img src="img/desiKhanna.jpg" alt="Desi Khanna Screenshot" />
+      </div>
+    </div>
 
-        <footer>
-            <a href="mailto:davinderverma@yahoo.com" class="footer__link">davinderverma@yahoo.com</a>
+    <!-- Footer -->
+    <footer>
+      <p>Contact me at: <a href="mailto:davinderverma@yahoo.com">davinderverma@yahoo.com</a></p>
+      <ul class="social-list">
+        <li class="social-list__item"><a href="https://twitter.com/davinder0110v" target="_blank"><i class="fab fa-twitter"></i> X</a></li>
+        <li class="social-list__item"><a href="https://www.linkedin.com/in/davinder-verma" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li class="social-list__item"><a href="https://github.com/shersingh7" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+      </ul>
+    </footer>
 
-            <ul class="social-list">
-
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://twitter.com/davinder0110v" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.instagram.com/davinder0110v/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-                
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.linkedin.com/in/davinder-verma" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-                
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com/shersingh7" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.youtube.com/channel/UCHU_YosqVxbHS7kPOxjxz6Q" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </li>
-
-            </ul>
-
-        </footer>
-
-        <script src="js/index.js"></script>
-        
-    </body>
+    <script src="script.js"></script>
+  </body>
 </html>

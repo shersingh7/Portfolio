@@ -1,172 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Davinder Portfolio Website</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futuristic Portfolio</title>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="stytle.css" /> 
+    
+    <!-- Inline CSS -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
+      body {
+        font-family: 'Orbitron', sans-serif;
+        background: #0d0d0d;
+        color: #f2f2f2;
+      }
 
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+      header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+      }
 
-        <link rel="stylesheet" href="css/stytle.css">
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
 
+      .nav-links li {
+        margin-right: 2rem;
+      }
 
+      .nav-links li a {
+        text-decoration: none;
+        color: #f2f2f2;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+      }
 
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.jpg" alt="My logo">
-                </a>     
-            </div>
+      .nav-links li a:hover {
+        color: #00ccff;
+      }
 
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
+      .intro {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #000, #001a33);
+      }
 
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-                </ul>
-            </nav>
+      .neon-text {
+        color: #00ccff;
+        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+        font-size: 4rem;
+      }
 
-        </header>
+      .tagline {
+        color: #f2f2f2;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
 
-        <!-- Introduction -->
-        <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
-                Hi, I am <strong>Davinder Verma</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">Developer</p>
-            <img src="img/img1.JPG" alt="a picture of davinder verma" class="intro__img">
-        </section>
+      /* Services Section */
+      .services {
+        padding: 5rem 0;
+        background: #111;
+        text-align: center;
+      }
 
-<!-- My Services -->
-<section class="my-services" id="services">
-    <h2 class="section__title section__title--services">Professional Services</h2>
-    <div class="services">
+      .section-title {
+        color: #00ccff;
+        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+      }
 
-        <div class="service">
-            <h3>Design + Development</h3>
-            <p>I specialize in crafting bespoke solutions and transforming innovative ideas into reality. I prioritize clean design patterns, streamlined content structures, and engaging user interactions. Proficient in web and mobile application development, I strive to deliver exceptional results.</p>
+      .service-list {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .service-card {
+        background: #1a1a1a;
+        padding: 2rem;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+      }
+
+      /* About Section */
+      .about {
+        background: #0d0d0d;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .about p {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        line-height: 1.8;
+      }
+
+      .about img {
+        margin-top: 2rem;
+        width: 300px;
+        border-radius: 50%;
+      }
+
+      /* Portfolio Section */
+      .portfolio {
+        background: #0d0d0d;
+        padding: 4rem 0;
+        text-align: center;
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      .portfolio-item img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .portfolio-item:hover img {
+        transform: scale(1.05);
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        background: #111;
+      }
+
+      footer a {
+        color: #00ccff;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#work">Portfolio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Intro Section -->
+    <section id="home" class="intro">
+      <div class="parallax">
+        <h1 class="neon-text">Welcome to the Future</h1>
+        <p class="tagline">Davinder Verma - Tech Alchemist</p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <h2 class="section-title">Professional Services</h2>
+      <div class="service-list">
+        <div class="service-card">
+          <h3>Web Development</h3>
+          <p>
+            I specialize in crafting bespoke solutions and transforming innovative ideas into reality. I prioritize clean design patterns, streamlined content structures, and engaging user interactions. Proficient in web and mobile application development, I strive to deliver exceptional results.
+          </p>
         </div>
-
-        <div class="service">
-            <h3>Photography</h3>
-            <p>With a passion for capturing high-quality digital imagery, I excel in the art of photography. My expertise spans various styles, encompassing composition, lighting, and advanced camera techniques. Equipped with a discerning eye for aesthetics and a comprehensive understanding of cutting-edge camera technologies, I consistently produce stunning visual compositions.</p>
+        <div class="service-card">
+          <h3>Photography</h3>
+          <p>
+            With a passion for capturing high-quality digital imagery, I excel in the art of photography. My expertise spans various styles, encompassing composition, lighting, and advanced camera techniques. Equipped with a discerning eye for aesthetics and a comprehensive understanding of cutting-edge camera technologies, I consistently produce stunning visual compositions.
+          </p>
         </div>
-
-        <div class="service">
-            <h3>Trading</h3>
-            <p>As a highly skilled Stock/Crypto Trader, I possess extensive market knowledge and a deep understanding of how stocks are influenced by current events. Leveraging meticulous analysis and strategic insights into market fluctuations, I execute well-informed buy and sell orders, optimizing profitability.</p>
+        <div class="service-card">
+          <h3>Stock & Crypto Trading</h3>
+          <p>
+            As a highly skilled Stock/Crypto Trader, I possess extensive market knowledge and a deep understanding of how stocks are influenced by current events. Leveraging meticulous analysis and strategic insights into market fluctuations, I execute well-informed buy and sell orders, optimizing profitability.
+          </p>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+        Greetings, I am Davinder. Rather than defining myself solely by past achievements, I prefer to focus on the future and the work I aspire to accomplish. While skills can be acquired, one's personality is inherent.
+        </p>
+        <p>
+        I thrive on perpetual learning, consistently seeking out new challenges, and engaging in endeavors that have a profound impact. My abundance of energy fuels my pursuit of diverse interests, hobbies, and artistic pursuits. With an innate ability to rapidly acquire new skills, I effortlessly navigate various projects and roles.
+        </p>
+    
+        <!-- Image Section with fallback -->
+        <img src="img/profile.jpg" alt="Portrait of Davinder" onerror="this.style.display='none';" />
+    </section>
 
-    <a href="#work" class="btn">Explore My Work</a>
-</section>
+    <!-- Portfolio Section -->
+    <section id="work" class="portfolio">
+      <h2 class="section-title">My Work</h2>
+      <div class="portfolio-grid">
+        <a href="portfolio-item1.html" class="portfolio-item">
+          <img src="img/chat.png" alt="Chat App" />
+        </a>
+        <a href="portfolio-item2.html" class="portfolio-item">
+          <img src="img/google-lens.jpg" alt="Google Lens Clone" />
+        </a>
+        <a href="portfolio-item3.html" class="portfolio-item">
+          <img src="img/weatherMain.jpg" alt="Weather App" />
+        </a>
+        <a href="portfolio-item4.html" class="portfolio-item">
+          <img src="img/food.jpg" alt="Food Ordering" />
+        </a>
+      </div>
+    </section>
 
-<!-- About Me -->
+    <!-- Footer -->
+    <footer>
+        <p>Contact me at: <a href="mailto:davinderverma@yahoo.com">davinderverma@yahoo.com</a></p>
+        <ul class="social-list" style="list-style-type: none; padding: 0;">
+        <li style="display: inline-block; margin-right: 1.5rem;">
+            <a href="https://twitter.com/davinder0110v" style="text-decoration: none; color: #00ccff;">
+            <i class="fab fa-twitter"></i> X
+            </a>
+        </li>
+        <li style="display: inline-block; margin-right: 1.5rem;">
+            <a href="https://www.linkedin.com/in/davinder-verma" style="text-decoration: none; color: #00ccff;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </li>
+        <li style="
 
-<section class="about-me" id="about">
-    <h2 class="section__title section__title--about">About Me</h2>
-    <p class="section__subtitle section__subtitle--about"></p>
+display: inline-block;">
+            <a href="https://github.com/shersingh7" style="text-decoration: none; color: #00ccff;">
+            <i class="fab fa-github"></i> GitHub
+            </a>
+        </li>
+        </ul>
+    </footer>
 
-    <div class="about-me__body">
-        <p>Greetings, I am Davinder. Rather than defining myself solely by past achievements, I prefer to focus on the future and the work I aspire to accomplish. While skills can be acquired, one's personality is inherent.</p>
-        <p>I thrive on perpetual learning, consistently seeking out new challenges, and engaging in endeavors that have a profound impact. My abundance of energy fuels my pursuit of diverse interests, hobbies, and artistic pursuits. With an innate ability to rapidly acquire new skills, I effortlessly navigate various projects and roles.</p>
-    </div>
-
-    <img src="img/img2.jpg" alt="Portrait of Davinder" class="about-me__img">
-
-</section>
-
-
-        <!-- My Work -->
-        <section class="my-work" id="work">
-            <h2 class="section__title">My work</h2>
-            <p class="section__subtitle"></p>
-
-            <div class="portfolio">
-
-                <!-- Portfolio item 01 -->
-                    
-                <a href="portfolio-item1.html" class="portfolio__item" >
-                    <img src="img/chat.png" alt="" class="portfolio__img">
-                </a>                
-
-                <!-- Portfolio item 02 -->
-                <a href="portfolio-item2.html" class="portfolio__item">
-                    <img src="img/google-lens.jpg" alt="" class="portfolio__img">
-                </a>
-
-                <!-- Portfolio item 03 -->
-                <a href="portfolio-item3.html" class="portfolio__item">
-                    <img src="img/weatherMain.jpg" alt="" class="portfolio__img">
-                </a>
-
-                 <!-- Portfolio item 04 -->
-                 <a href="portfolio-item4.html" class="portfolio__item">
-                    <img src="img/food.jpg" alt="" class="portfolio__img">
-                </a>
-
-                 <!-- Portfolio item 05 -->
-                 <a href="https://www.coinbase.com/portfolio/7304681f-e60f-43ff-9513-8eef035f7335?utm_campaign=rt_i_m_w_m_acq_ugc_soc_0_portfolio&utm_source=ugc&utm_platform=iOS" class="portfolio__item" target="_blank">
-                    <img src="img/crypto.png" alt="" class="portfolio__img">
-                </a>
-
-            </div>
-
-        </section>
-
-        <!-- Footer -->
-
-        <footer>
-            <a href="mailto:davinderverma@yahoo.com" class="footer__link">davinderverma@yahoo.com</a>
-
-            <ul class="social-list">
-
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://twitter.com/davinder0110v" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.instagram.com/davinder0110v/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-                
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.linkedin.com/in/davinder-verma" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-                
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com/shersingh7" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.youtube.com/channel/UCHU_YosqVxbHS7kPOxjxz6Q" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </li>
-
-            </ul>
-
-        </footer>
-
-        <script src="js/index.js"></script>
-        
-    </body>
+    <!-- JavaScript for Smooth Scrolling -->
+    <script src="script.js"></script>
+  </body>
 </html>
