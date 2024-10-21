@@ -75,6 +75,11 @@ header {
   margin: 0 auto; /* Center the section */
 }
 
+/* Add more padding to the top of sections to prevent the header from covering the section title */
+section {
+  padding-top: 120px; /* Increased padding for better spacing on mobile screens */
+}
+
 .section-title {
   color: #00ccff;
   text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
