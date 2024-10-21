@@ -28,11 +28,12 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
+  justify-content: space-evenly; /* Center the links inside the navigation bar */
+  /* flex-wrap:nowrap; Allow wrapping on small screens */
+  gap: 2rem; /* Add some space between links */
 }
 
-.nav-links li {
-  margin-right: 2rem;
-}
+
 
 .nav-links li a {
   text-decoration: none;
@@ -55,6 +56,7 @@ header {
   position: relative;
   z-index: 1; /* Lower z-index so it goes behind the next section */
   overflow: hidden; /* Ensure nothing leaks when scrolling */
+  padding-bottom: 2rem;
 }
 
 .neon-text {
@@ -88,8 +90,7 @@ section {
   color: #00ccff;
   text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
   font-size: 3rem;
-  margin-top: 0; /* Remove any top margin */
-  padding-top: 0; /* Remove any top padding */
+  padding-bottom: 2rem;
 }
 
 .service-list {
@@ -302,3 +303,4 @@ html {
   box-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
   margin-top: 0.5rem;
 }
+
