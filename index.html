@@ -11,12 +11,31 @@
     <!-- Link to external CSS in the css folder -->
     <link rel="stylesheet" href="css/style.css" /> 
     <style>
-       .intro {
-        height: 100vh;
+      /* Intro section */
+      .intro {
+        min-height: 100vh; /* Use min-height to ensure it takes up the full viewport height */
         display: flex;
         justify-content: center;
         align-items: center;
         background: linear-gradient(135deg, #000, #001a33);
+        padding: 0 20px; /* Add some padding to avoid any overflow on small screens */
+        box-sizing: border-box; /* Ensure padding does not affect width calculation */
+      }
+
+      .parallax {
+        text-align: center;
+      }
+
+      .neon-text {
+        color: #00ccff;
+        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+        font-size: 3rem; /* Adjust the size to better fit smaller screens */
+      }
+
+      .tagline {
+        color: #f2f2f2;
+        font-size: 1.3rem; /* Adjust the font size slightly for better readability */
+        margin-top: 1rem;
       }
     </style>
   </head>
