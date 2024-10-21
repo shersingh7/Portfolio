@@ -71,27 +71,45 @@ header {
   padding: 5rem 0;
   background: #111;
   text-align: center;
+  max-width: 1200px; /* Ensure the width matches the rest of the layout */
+  margin: 0 auto; /* Center the section */
 }
 
 .section-title {
   color: #00ccff;
   text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
-  font-size: 3rem;
+  font-size: 2.5rem; /* Decrease font size */
   margin-bottom: 3rem;
 }
 
 .service-list {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
 }
 
 .service-card {
   background: #1a1a1a;
-  padding: 2rem;
+  padding: 1.5rem; /* Decrease padding to fit within the section */
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
   transition: transform 0.3s ease;
+  max-width: 350px; /* Ensure each service card has a maximum width */
+  margin-bottom: 2rem; /* Add spacing between rows */
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card h3 {
+  font-size: 1.8rem; /* Decrease the title font size */
+}
+
+.service-card p {
+  font-size: 1.1rem; /* Adjust the paragraph font size */
+  line-height: 1.5;
 }
 
 .service-card:hover {
